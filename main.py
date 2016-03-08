@@ -1,14 +1,32 @@
-# coding = ascii
-
-from Helper import get_words
-from Helper import get_alphabet
-
+import Helper
 import Descrambler
 
-words = get_words("francais.txt")
+spacer = "\n-------------------------\n"
+exit_message = "Goodbye!!!"
+query_message = "Enter your characters: "
+language = "en"
 
-alphabet = get_alphabet('alphabet.fr.txt')
+language_assets_folder = "./LanguageAssets"
 
-characters = input("Enter your characters: ")
+words = Helper.get_words(
+    language_assets_folder + '/word-list.' + language + '.txt')
 
-print(Descrambler.descramble(characters, words, alphabet))
+alphabet = Helper.get_alphabet(
+    language_assets_folder + '/alphabet.' + language + '.txt')
+
+# Main Program
+
+while True:
+    print(spacer)
+
+    characters = input(query_message)
+
+    if len(characters) == 0:
+        x = input("Press <ENTER> again to quit \n")
+        if len(x) == 0:
+            print(exit_message + spacer)
+            break
+        else:
+            continue
+
+    print(Descrambler.descramble(characters, words, alphabet))
