@@ -1,47 +1,55 @@
-def descramble(characters: str, word_list: list, alphabet: list) -> list:
-    """returns list of words matching given characters"""
-    words = []
-    new_word_list = []
-    newer_word_list = []
-    inverse_alphabet = []
+class Descrambler:
 
-    # gets alphabet minus characters
-    for letter in alphabet:
-        for char in characters:
-            if letter not in characters and letter not in inverse_alphabet:
-                inverse_alphabet.append(letter)
+    def __init__(self, characters: str, word_list: list, alphabet: list):
+        self.alphabet = alphabet
+        self.characters = characters
+        self.word_list = word_list
 
-    # Reduces word list by length of words
-    for word in word_list:
-        if len(word) == len(characters):
-            new_word_list.append(word)
+        self.words = []
+        self.new_word_list = []
+        self.newer_word_list = []
+        self.inverse_alphabet = []
 
-    # Reduces word list using the inverse alphabet
-    for word in new_word_list:
-        add = True
+    def descramble(self) -> list:
+        """returns list of words matching given characters"""
 
-        for letter in inverse_alphabet:
-            if letter not in word:
-                continue
-            else:
-                add = False
-                break
+        # gets alphabet minus characters
+        for letter in self.alphabet:
+            for char in self.characters:
+                if letter not in self.characters and letter not in self.inverse_alphabet:
+                    self.inverse_alphabet.append(letter)
 
-        if add:
-            newer_word_list.append(word)
+        # Reduces word list by length of words
+        for word in self.word_list:
+            if len(word) == len(self.characters):
+                self.new_word_list.append(word)
 
-    # match agaisnt the character count
-    for word in newer_word_list:
-        add = True
+        # Reduces word list using the inverse alphabet
+        for word in self.new_word_list:
+            add = True
 
-        for char in characters:
-            if characters.count(char) != word.count(char):
-                add = False
+            for letter in self.inverse_alphabet:
+                if letter not in word:
+                    continue
+                else:
+                    add = False
+                    break
 
-        if add:
-            words.append(word)
+            if add:
+                self.newer_word_list.append(word)
 
-    # print('newer word list:', newer_word_list)
-    # print('new alphabet:', new_alphabet)
+        # match agaisnt the character count
+        for word in self.newer_word_list:
+            add = True
 
-    return words
+            for char in self.characters:
+                if self.characters.count(char) != word.count(char):
+                    add = False
+
+            if add:
+                self.words.append(word)
+
+        # print('newer word list:', newer_word_list)
+        # print('new alphabet:', new_alphabet)
+
+        return self.words
