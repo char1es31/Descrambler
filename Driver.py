@@ -52,7 +52,13 @@ class Driver:
             self.descrambler = Descrambler.Descrambler(
                 characters, self.words, self.alphabet)
 
-            print(self.descrambler.descramble())
+            words = self.descrambler.descramble()
+
+            print(self.spacer)
+            print(len(words), "words found:\n")
+
+            for word in words:
+                print(" - ", word)
 
 
 if __name__ == '__main__':
