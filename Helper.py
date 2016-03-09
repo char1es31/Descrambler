@@ -6,7 +6,7 @@ import re
 def get_words(word_list_file_name: str) -> list:
     """Returns a list of words found in the file"""
 
-    word_list_file = open(word_list_file_name, 'r')
+    word_list_file = open(word_list_file_name, 'r', encoding='utf8')
 
     word_list = []
 

@@ -5,7 +5,7 @@ def scrape(file_name: str) -> list:
     sorted_alphabet = []
 
     # read file char by char, and generate alphabet
-    with open(file_name, 'r', encoding='UTF-8') as f:
+    with open(file_name, 'r', encoding='utf8') as f:
         while True:
             c = f.read(1)
             if not c:
@@ -30,7 +30,7 @@ def main():
 
     alphabet = scrape(input_file)
 
-    with open(output_file, mode='w', encoding="UTF-8") as f:
+    with open(output_file, mode='w', encoding="utf8") as f:
         for c in alphabet:
             f.write(c)
             character_count += 1
