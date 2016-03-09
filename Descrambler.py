@@ -49,7 +49,4 @@ class Descrambler:
             if add:
                 self.words.append(word)
 
-        # print('newer word list:', newer_word_list)
-        # print('new alphabet:', new_alphabet)
-
         return self.words
