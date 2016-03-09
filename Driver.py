@@ -3,8 +3,11 @@ import Descrambler
 
 
 class Driver:
+    """Drives the descrambling process"""
 
     def __init__(self):
+        """Initialize all variables, uses the Helper module"""
+
         self.spacer = "\n-------------------------\n"
         self.exit_message = "Goodbye!!!"
         self.query_message = "Enter your characters: "
@@ -30,8 +33,8 @@ class Driver:
             '.txt')
 
     def main(self):
-
-        # Main program loop
+        """loops through the descrambling process, asking
+        the user for new characters after every descrambling"""
 
         while True:
             print(self.spacer)

@@ -1,5 +1,6 @@
-
 def scrape(file_name: str) -> list:
+    """Scrapes each unique character from a text file, removes \n"""
+
     alphabet = []
     sorted_alphabet = []
 
@@ -19,6 +20,8 @@ def scrape(file_name: str) -> list:
 
 
 def main():
+    """asks user for input/output files, and scrapes and saves respectivly"""
+
     character_count = 0
 
     input_file = str(input("path of file to be scraped?: "))
@@ -33,6 +36,7 @@ def main():
             character_count += 1
 
     print(character_count, "characters scraped")
+
 
 if __name__ == '__main__':
     main()

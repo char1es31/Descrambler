@@ -59,6 +59,8 @@ def get_languages(directory_name: str) -> list:
 
 
 def get_language(language_list: list) -> str:
+    """Asks the user which language they would like to use"""
+
     print("Available languages: ")
     print(language_list)
 
