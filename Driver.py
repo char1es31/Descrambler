@@ -8,11 +8,14 @@ class Driver:
         self.spacer = "\n-------------------------\n"
         self.exit_message = "Goodbye!!!"
         self.query_message = "Enter your characters: "
-        self.language = "en"
 
         self.language_assets_folder = "./LanguageAssets"
 
         self.descrambler = None
+
+        self.language_list = Helper.get_languages(self.language_assets_folder)
+
+        self.language = Helper.get_language(self.language_list)
 
         self.words = Helper.get_words(
             self.language_assets_folder +
@@ -26,21 +29,9 @@ class Driver:
             self.language +
             '.txt')
 
-        self.language_list = Helper.get_languages(self.language_assets_folder)
-
     def main(self):
 
         # Main program loop
-
-        print("Available languages: ")
-        print(self.language_list)
-
-        while True:
-            self.language = input("Please enter a langauge: ")
-            if self.language in self.language_list:
-                break
-            else:
-                print("Not a valid language")
 
         while True:
             print(self.spacer)

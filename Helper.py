@@ -56,3 +56,19 @@ def get_languages(directory_name: str) -> list:
                         language_list.append(lang1)
 
     return language_list
+
+
+def get_language(language_list: list) -> str:
+    print("Available languages: ")
+    print(language_list)
+
+    language = ''
+
+    while True:
+        language = input("Please enter a langauge: ")
+        if language in language_list:
+            break
+        else:
+            print("Not a valid language")
+
+    return language
