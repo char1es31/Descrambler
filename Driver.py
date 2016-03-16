@@ -36,6 +36,11 @@ class Driver:
         """loops through the descrambling process, asking
         the user for new characters after every descrambling"""
 
+        # sets the 'root' directory to the one containing this file
+        # this helps with portability
+        import os
+        os.chdir(os.path.dirname(os.path.realpath(__file__)))
+
         while True:
             print(self.spacer)
 
