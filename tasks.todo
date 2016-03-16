@@ -1,12 +1,26 @@
 Features:
+  Muliple Language Support:
+    ✔ add new language (en) @done (6-03-16 20:56)
+    ✔ selected langauge should be set at run-time @done (8-03-16 16:23)
+    ✔ search for availible langauges and display, check against availible langauges on user entry @done (8-03-16 16:24)
+    ☐ call the alphabet scraper when a word-list is found but there is no alphabet
+
+  Alphabet Scraper:
+    ✔ implement class to scrape all unique characters from a file @done (9-03-16 16:24)
+
   Multiple words:
     example: wordleollh -> hello world
-    ☐ seperate function for this
+    ☐ possibly? seperate function for this
     ☐ develop algorithm
     ☐ implement algorithm
     ☐ support new function in Descrambler
+
+  Variable Length:
+    ☐ develop algorithm for getting words <=len(characters)
 
 Miscelaneous:
   ☐ ignore case
   ☐ ignore punctuation (hyphens periods etc)
   ☐ ignore accents (é == e, à == a, etc)
+  ☐ use extra parameters to set optional settings when descrambling (multiple words, variable length, etc.)
+  
