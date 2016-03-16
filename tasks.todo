@@ -1,0 +1,12 @@
+Features:
+  Multiple words:
+    example: wordleollh -> hello world
+    ☐ seperate function for this
+    ☐ develop algorithm
+    ☐ implement algorithm
+    ☐ support new function in Descrambler
+
+Miscelaneous:
+  ☐ ignore case
+  ☐ ignore punctuation (hyphens periods etc)
+  ☐ ignore accents (é == e, à == a, etc)
