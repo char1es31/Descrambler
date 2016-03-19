@@ -41,6 +41,9 @@ class Driver:
         import os
         os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
+        self.descrambler = Descrambler.Descrambler(
+            self.words, self.alphabet)
+
         while True:
             print(self.spacer)
 
@@ -54,10 +57,10 @@ class Driver:
                 else:
                     continue
 
-            self.descrambler = Descrambler.Descrambler(
-                characters, self.words, self.alphabet)
+            words = self.descrambler.descramble(characters)
 
-            words = self.descrambler.descramble()
+            words.sort()
+            words.sort(key=len, reverse=True)
 
             print(self.spacer)
             print(len(words), "words found:\n")
