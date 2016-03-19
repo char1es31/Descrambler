@@ -1,52 +1,26 @@
 class Descrambler:
 
-    def __init__(self, characters: str, word_list: list, alphabet: list):
+    def __init__(self, word_list: list, alphabet: list):
         self.alphabet = alphabet
-        self.characters = characters
         self.word_list = word_list
 
-        self.words = []
-        self.new_word_list = []
-        self.newer_word_list = []
-        self.inverse_alphabet = []
+    def descramble(self, characters: str)-> list:
 
-    def descramble(self) -> list:
-        """returns list of words matching given characters"""
-
-        # gets alphabet minus characters
-        for letter in self.alphabet:
-            for char in self.characters:
-                if letter not in self.characters and letter not in self.inverse_alphabet:
-                    self.inverse_alphabet.append(letter)
+        words = []
+        new_word_list = []
 
         # Reduces word list by length of words
         for word in self.word_list:
-            if len(word) == len(self.characters):
-                self.new_word_list.append(word)
+            if len(word) <= len(characters):
+                new_word_list.append(word)
 
-        # Reduces word list using the inverse alphabet
-        for word in self.new_word_list:
+        for word in new_word_list:
             add = True
-
-            for letter in self.inverse_alphabet:
-                if letter not in word:
-                    continue
-                else:
+            for char in word:
+                if char not in characters or word.count(char) > characters.count(char):
                     add = False
-                    break
-
             if add:
-                self.newer_word_list.append(word)
+                words.append(word)
 
-        # match agaisnt the character count
-        for word in self.newer_word_list:
-            add = True
-
-            for char in self.characters:
-                if self.characters.count(char) != word.count(char):
-                    add = False
-
-            if add:
-                self.words.append(word)
-
-        return self.words
+        # return a copy of the list
+        return list(words)
