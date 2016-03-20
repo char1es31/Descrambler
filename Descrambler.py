@@ -1,7 +1,6 @@
 class Descrambler:
 
-    def __init__(self, word_list: list, alphabet: list):
-        self.alphabet = alphabet
+    def __init__(self, word_list: list):
         self.word_list = word_list
 
     def descramble(self, characters: str)-> list:

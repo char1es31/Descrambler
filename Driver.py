@@ -16,13 +16,11 @@ class Driver:
 
         self.descrambler = None
 
-        self.language_list = Helper.get_languages(self.language_assets_folder)
+        self.language_list = Helper.get_language_list(self.language_assets_folder)
 
         self.language = Helper.get_language(self.language_list)
 
         self.words = Helper.get_words(self.language_assets_folder, self.language)
-
-        self.alphabet = Helper.get_alphabet(self.language_assets_folder, self.language)
 
     def main(self):
         """loops through the descrambling process, asking
@@ -34,7 +32,7 @@ class Driver:
         os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
         self.descrambler = Descrambler.Descrambler(
-            self.words, self.alphabet)
+            self.words)
 
         while True:
             print(self.spacer)
