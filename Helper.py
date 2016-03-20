@@ -1,12 +1,16 @@
 from os import listdir
-from os.path import isfile, join
+from os.path import isfile, join, getmtime
 import re
+import AlphabetScraper
+import time
 
 
-def get_words(word_list_file_name: str) -> list:
+def get_words(directory_name: str, language: str) -> list:
     """Returns a list of words found in the file"""
 
-    word_list_file = open(word_list_file_name, 'r', encoding='utf8')
+    file_name = directory_name + '/word-list.' + language + '.txt'
+
+    word_list_file = open(file_name, 'r', encoding='utf8')
 
     word_list = []
 
@@ -16,18 +20,34 @@ def get_words(word_list_file_name: str) -> list:
     return word_list
 
 
-def get_alphabet(alphabet_file_name: str) -> list:
+def get_alphabet(directory_name: str, language: str) -> list:
     """Returns list of characters found in file"""
 
-    alphabet_file = open(alphabet_file_name, 'r', encoding='utf8')
+    alphabet_file_name = directory_name + '/alphabet.' + language + '.txt'
+    word_list_file_name = directory_name + '/word-list.' + language + '.txt'
 
     alphabet = []
 
-    while True:
-        c = alphabet_file.read(1)
-        if not c:
-            break
-        alphabet.append(c)
+    word_list_mtime = time.ctime(getmtime(word_list_file_name))
+
+    # if alphabet file exists and the corresponding word-list hasnt changed
+    if isfile(alphabet_file_name) and time.ctime(getmtime(alphabet_file_name)) >= word_list_mtime:
+
+        alphabet_file = open(alphabet_file_name, 'r', encoding='utf8')
+
+        while True:
+            c = alphabet_file.read(1)
+            if not c:
+                break
+            alphabet.append(c)
+    # generate an alphabet and save it
+    else:
+        print("alphabet outdated, updating file:", alphabet_file_name)
+        alphabet = AlphabetScraper.scrape(word_list_file_name)
+
+        with open(alphabet_file_name, mode='w', encoding="utf8") as f:
+            for c in alphabet:
+                f.write(c)
 
     return alphabet
 
@@ -40,20 +60,12 @@ def get_languages(directory_name: str) -> list:
     file_list = [
         f for f in listdir(directory_name) if isfile(join(directory_name, f))]
 
-    lang1, lang2 = "", ""
+    # scan for word-list file
+    for file_name in file_list:
+        lang = re.match('word-list.(\w{2}).txt', file_name)
 
-    # scan for alphabet file
-    for file_name1 in file_list:
-        if re.match('alphabet.\w{2}.txt', file_name1):
-            # if found, scan for word-list file of the same language
-            lang1 = file_name1.replace('alphabet.', '').replace('.txt', '')
-
-            for file_name2 in file_list:
-                if re.match('word-list.' + lang1 + '.txt', file_name2):
-                    lang2 = file_name1.replace('alphabet.', '').replace('.txt', '')
-
-                    if lang1 == lang2:
-                        language_list.append(lang1)
+        if lang:
+            language_list.append(str(lang.group(1)))
 
     return language_list
 

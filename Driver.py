@@ -20,17 +20,9 @@ class Driver:
 
         self.language = Helper.get_language(self.language_list)
 
-        self.words = Helper.get_words(
-            self.language_assets_folder +
-            '/word-list.' +
-            self.language +
-            '.txt')
+        self.words = Helper.get_words(self.language_assets_folder, self.language)
 
-        self.alphabet = Helper.get_alphabet(
-            self.language_assets_folder +
-            '/alphabet.' +
-            self.language +
-            '.txt')
+        self.alphabet = Helper.get_alphabet(self.language_assets_folder, self.language)
 
     def main(self):
         """loops through the descrambling process, asking
