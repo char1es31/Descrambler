@@ -14,6 +14,7 @@ class Descrambler:
             if len(word) <= len(characters):
                 new_word_list.append(word)
 
+        # compare characters between word-list and input
         for word in new_word_list:
             add = True
             for char in word:
