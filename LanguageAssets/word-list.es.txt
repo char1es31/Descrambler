@@ -10107,7 +10107,6 @@ aúpa
 ávido
 ázimo
 ázoe
-b
 baalita
 baba
 babada
@@ -13486,7 +13485,6 @@ búnker
 búsqueda
 búster
 búzano
-c
 ca
 caaminí
 cabadelante
@@ -24801,7 +24799,6 @@ cúrcuma
 cúspide
 cúter
 cúyo
-d
 dable
 daca
 dacha
@@ -30190,7 +30187,6 @@ dúo
 dúplex
 dúplica
 dúplice
-e
 ea
 easonense
 ebanista
@@ -36828,7 +36824,6 @@ eón
 éxplicit
 éxtasi
 éxtasis
-f
 fa
 faba
 fabada
@@ -39398,7 +39393,6 @@ fúrcula
 fúsil
 fútbol
 fútil
-g
 gabacha
 gabachada
 gabacho
@@ -42013,7 +42007,6 @@ güisquilar
 güito
 gúmena
 güérmeces
-h
 ha
 haba
 habado
@@ -44003,7 +43996,6 @@ húmil
 húmilmente
 húngaro
 húsar
-i
 iatrogénico
 ibaguereño
 ibarreño
@@ -46921,7 +46913,6 @@ iónico
 ístmico
 ítalo
 ítem
-j
 ja
 jaba
 jabado
@@ -47738,7 +47729,6 @@ júbilo
 júcaro
 júnceo
 júnior
-k
 ka
 kafkiano
 kaki
@@ -47810,7 +47800,6 @@ káiser
 kárate
 kárstico
 kéfir
-l
 la
 labe
 labeo
@@ -50011,7 +50000,6 @@ lúpulo
 lústrico
 lútea
 lúteo
-m
 mable
 mabolo
 mabí
@@ -54792,7 +54780,6 @@ músculo
 música
 músico
 mútilo
-A
 Abraham
 Acates
 Acuario
@@ -54836,7 +54823,6 @@ Atlante
 Avesta
 Azul
 AArónico
-B
 Babia
 Babilonia
 Babá
@@ -54861,7 +54847,6 @@ Briján
 Bueno
 Bálteo
 Bárbara
-C
 Cabo
 Cabra
 Calabar
@@ -54908,7 +54893,6 @@ Cupido
 Cáncer
 Cástor
 César
-D
 D.D.T
 Daimiel
 Damocles
@@ -54920,7 +54904,6 @@ Diana
 Diesel
 Dorado
 DNA
-E
 Eclíptica
 Edipo
 Egeria
@@ -54937,7 +54920,6 @@ Ester
 Etiopía
 Europa
 Eustaquio
-F
 Faetón
 Fahrenheit
 Falopio
@@ -54949,14 +54931,12 @@ Flandes
 Florencia
 Fraga
 Francia
-G
 Galiana
 Ge
 Gemonias
 Guernesey
 Géminis
 Génova
-H
 He
 Helena
 Helicón
@@ -54965,7 +54945,6 @@ Higuera
 Hinojosa
 Hércules
 Héspero
-I
 In
 India
 Inglaterra
@@ -54974,7 +54953,6 @@ Instituta
 Io
 Ir
 Islandia
-J
 Japón
 Jauja
 Jehová
@@ -54992,9 +54970,7 @@ Juan
 Juanelo
 Judea
 Júpiter
-K
 K.
-L
 La
 Labrador
 Leiden
@@ -55005,7 +54981,6 @@ Libra
 Ll
 Lucifer
 López
-M
 Macabeo
 Mach
 Madrid
@@ -55030,7 +55005,6 @@ Morfeo
 Moro
 Morse
 México
-N
 Na
 Natividad
 Navidad
@@ -55038,12 +55012,10 @@ Ne
 Neptuno
 Ni
 Noé
-O
 O.
 Oceánidas
 Olimpo
 Os
-P
 Pablo
 Paco
 Palencia
@@ -55071,11 +55043,9 @@ Prusia
 Pu
 Purísima
 Pórtland
-Q
 Quico
 Quintín
 Quío
-R
 Re
 Rea
 Rebeca
@@ -55093,7 +55063,6 @@ Roque
 Rota
 Rubicón
 Rusia
-S
 Sagitario
 Sajonia
 Salamanca
@@ -55108,7 +55077,6 @@ Se
 Seltz
 Si
 Sirio
-T
 T.N.T.
 Ta
 Tauro
@@ -55125,9 +55093,7 @@ Troya
 Tule
 Tántalo
 Túnez
-U
 Urías
-V
 Varolio
 Veda
 Vega
@@ -55139,14 +55105,9 @@ Vicente
 Vidriera
 Villadiego
 Virgo
-W
-X
-Y
-Z
 Zendavesta
 Zodiaco
 Zodíaco
-n
 na
 naba
 nabab
@@ -56309,7 +56270,6 @@ núbil
 núcleo
 número
 númida
-ñ
 ña
 ñacurutú
 ñagaza
@@ -56373,7 +56333,6 @@ númida
 ñángara
 ñáñara
 ñáñigo
-o
 oasis
 oaxaqueño
 obcecación
@@ -57668,7 +57627,6 @@ oíslo
 óvolo
 óvulo
 óxido
-p
 pabellón
 pabilo
 pabiloso
@@ -64267,7 +64225,6 @@ púnico
 púrpura
 pústula
 pútrido
-q
 quark
 que
 quebracho
@@ -64701,7 +64658,6 @@ quíntuplo
 quío
 quístico
 quórum
-r
 raba
 rabada
 rabadilla
@@ -68808,7 +68764,6 @@ rúnico
 rústicamente
 rústico
 rútilo
-s
 sabadellense
 sabadeño
 sabadiego
@@ -72935,7 +72890,6 @@ súplica
 súrbana
 súrculo
 súrtuba
-t
 ta
 taba
 tabacal
@@ -77279,7 +77233,6 @@ túrdulo
 túrgido
 túrmix
 tútano
-u
 ubajay
 ube
 ubetense
@@ -77699,7 +77652,6 @@ uñí
 útilmente
 úvea
 úvula
-v
 vaca
 vacabuey
 vacacional
@@ -79459,7 +79411,6 @@ vómer
 vómico
 vómito
 vórtice
-w
 wagneriano
 washingtoniano
 waterpolista
@@ -79481,7 +79432,6 @@ wolframio
 wéber
 wélter
 wólfram
-x
 xantoma
 xenofobia
 xenófobo
@@ -79510,7 +79460,6 @@ xilófago
 xilófono
 xilógrafo
 xilórgano
-y
 ya
 yaacabó
 yaba
@@ -79712,7 +79661,6 @@ yáquil
 yátaro
 yérsey
 yóquey
-z
 za
 zabalmedina
 zabarcera
