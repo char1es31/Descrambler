@@ -1,8 +1,6 @@
-from os import listdir
-from os.path import isfile, join, getmtime
+import os
 import re
-import AlphabetScraper
-import time
+import datetime
 
 
 def get_words(directory_name: str, language: str) -> list:
@@ -28,10 +26,12 @@ def get_alphabet(directory_name: str, language: str) -> list:
 
     alphabet = []
 
-    word_list_mtime = time.ctime(getmtime(word_list_file_name))
+    word_list_mdatetime = datetime.datetime.fromtimestamp(os.path.getmtime(word_list_file_name))
 
     # if alphabet file exists and the corresponding word-list hasnt changed
-    if isfile(alphabet_file_name) and time.ctime(getmtime(alphabet_file_name)) >= word_list_mtime:
+    if os.path.isfile(alphabet_file_name) \
+       and datetime.datetime.fromtimestamp(os.path.getmtime(alphabet_file_name)) \
+       >= word_list_mdatetime:
 
         alphabet_file = open(alphabet_file_name, 'r', encoding='utf8')
 
@@ -58,7 +58,7 @@ def get_languages(directory_name: str) -> list:
     language_list = []
 
     file_list = [
-        f for f in listdir(directory_name) if isfile(join(directory_name, f))]
+        f for f in os.listdir(directory_name) if os.path.isfile(os.path.join(directory_name, f))]
 
     # scan for word-list file
     for file_name in file_list:
