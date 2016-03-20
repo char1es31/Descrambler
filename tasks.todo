@@ -1,9 +1,9 @@
 Features:
   Muliple Language Support:
     ✔ add new language (en) @done (6-03-16 20:56)
-    ☐ call the alphabet scraper when a word-list is found but there is no alphabet
     ✔ selected language should be set at run-time @done (8-03-16 16:23)
     ✔ search for available languages and display, check against available languages on user entry @done (8-03-16 16:24)
+    ✔ call the alphabet scraper when a word-list is found but there is no alphabet @done (16-03-19 22:39)
 
   Alphabet Scraper:
     ✔ implement class to scrape all unique characters from a file @done (9-03-16 16:24)
