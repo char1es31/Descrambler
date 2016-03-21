@@ -11,10 +11,10 @@ Features:
   Multiple words:
     example: wordleollh -> hello world
     used leftover letters in character and descramble those
-    ☐ possibly? separate function for this
-    ☐ develop algorithm
-    ☐ implement algorithm
-    ☐ support new function in Descrambler
+    ✔ possibly? separate function for this @done (16-03-21 19:43)
+    ✔ develop algorithm @done (16-03-21 19:44)
+    ✔ implement algorithm @done (16-03-21 19:44)
+    ☐ support new function in Descrambler (too slow)
 
   Variable Length:
     ✔ develop algorithm for getting words <=len(characters) @done (16-03-19 12:00)
